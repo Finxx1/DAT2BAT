@@ -3,7 +3,7 @@ import os
 import base64
 
 
-def insert_data(string, data, every):
+def insert_data(string, data, every):  # Function to insert data
     return data.join(string[i:i+every] for i in range(0, len(string), every))
 
 
@@ -11,14 +11,25 @@ if len(sys.argv) < 2:  # Make sure that people actually give the dang script fil
     print('To make a Self Extracting Archive, drag the files you want to put together onto this file. Or, if your on the command line, just do DAT2BAT <file>')
     input('Press enter to exit')
 else:
+
+    archivename = os.path.splitext(sys.argv[1])[0] + ".bat"
+
     for x in range(len(sys.argv) - 1):
+        # Read
         filename = sys.argv[x + 1]  # Get file
-        filedata = open(filename, "rb").read()  # Read raw bytes of file
+        filestream = open(filename, "rb")  # Create a file stream
+        filedata = filestream.read()  # Read raw bytes of file
+        filestream.close()
+        # Compress and encode data
+        nfiledata = base64.b64encode(filedata)  # Encode data in Base64
 
-        nfiledata = base64.b64encode(filedata)
+        # Get ready to write
         if os.path.exists(filename):
-            nfilestream = open("Archive.bat", "a")
+            nfilestream = open(archivename, "a")
         else:
-            nfilestream = open("Archive.bat", "w")
+            nfilestream = open(archivename, "w")
 
-        nfilestream.write(insert_data("echo " + str(nfiledata).replace("b'", "").replace("'", "") + " >> temp\r\ncertutil -decode temp " + os.path.split(filename)[1] + "\r\ndel temp -yr\r\n", " >> temp\r\necho ", 8000))
+        # Split Base64 data at every 8000th character so a cmd line doesnt get too long
+        nfiledata = insert_data(str(nfiledata), " >> temp\r\necho ", 8000)
+        # Format data into batch using magic
+        nfilestream.write("echo " + str(nfiledata).replace("b'", "").replace("'", "") + " >> temp\r\ncertutil -decode temp " + os.path.split(filename)[1] + "\r\ndel temp -yr\r\n")
