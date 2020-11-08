@@ -22,7 +22,7 @@ else:
             usePass = 1
             archivename = os.path.splitext(sys.argv[3])[0] + ".bat"
             continue
-        if usePass == 1 and x + 1 == 2:
+        if usePass == 1 and x == 1:
             continue
         # Read
         filename = sys.argv[x + 1]  # Get file
