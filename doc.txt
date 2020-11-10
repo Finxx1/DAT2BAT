@@ -1,8 +1,0 @@
-DAT2BAT is a program that makes Self-Extracting
-Archives. Simply drag files on to 'DAT2BAT.py'.
-If you are using the command line, simply type
-'DAT2BAT.py ' followed by any amount of files.
-In the command line, you can set a password for
-the archive by typing '-pass <PASSWORD>' this
-would look like
-'python DAT2BAT.py -pass 123456 data.dat'
