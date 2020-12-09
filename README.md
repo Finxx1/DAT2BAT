@@ -1,5 +1,6 @@
 # DAT2BAT
 ![](Img/logo.png)
+---
 A data archiving utility
 
 ## How do I use it?
