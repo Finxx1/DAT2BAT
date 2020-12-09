@@ -33,3 +33,5 @@ else:
         nfiledata = insert_data(str(nfiledata), " > temp\necho ", 8000)
         # Format data into batch using magic
         nfilestream.write("echo " + str(nfiledata).replace("b'", "").replace("'", "") + " > temp\nbase64 -d temp > " + os.path.split(filename)[1] + "\nrm temp")
+print('Please keep in mind that to use the archive you must use homebrew to install GNU coreutils!!!')
+input('Press enter to exit')
