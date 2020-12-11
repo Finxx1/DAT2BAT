@@ -1,7 +1,7 @@
 import sys
 import os
 import base64
-
+import subprocess
 
 def insert_data(string, data, every):  # Function to insert data
     return data.join(string[i:i+every] for i in range(0, len(string), every))
@@ -13,6 +13,7 @@ if len(sys.argv) < 2:  # Make sure that people actually give the dang script fil
 else:
 
     usePass = 0  # Determine whether to use a password. Right here so the for loop can reach it without overriding it
+    useExe = 1
 
     archivename = os.path.splitext(sys.argv[1])[0] + ".bat"
 
