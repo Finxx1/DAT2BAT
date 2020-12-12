@@ -8,7 +8,7 @@ def insert_data(string, data, every):  # Function to insert data
 
 
 if len(sys.argv) < 2:  # Make sure that people actually give the dang script files.
-    print('To make a Self Extracting Archive, drag the files you want to put together onto this file. Or, if your on the command line, just do DAT2BAT <file>')
+    print('To make a Self Extracting Archive, drag the files you want to put together onto this file. Or, if your on the command line, just do bARC <file>')
     input('Press enter to exit')
 else:
 
