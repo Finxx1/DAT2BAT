@@ -4,7 +4,7 @@
 A data archiving utility
 
 ## How do I use it?
-You can get Windows binaries [here](https://github.com/Finxx1/DAT2BAT/releases) and just drag files on to ```bARC.exe```. However, if the exe does not work, use the below steps.
+You can get binaries [here](https://github.com/Finxx1/DAT2BAT/releases) and just drag files on to ```bARC.exe```. However, if the exe does not work, use the below steps.
 ### Prerequisites
 Install python [here](https://www.python.org/downloads/), making sure to select Add Python (Version) to PATH.
 ### Method 1.
