@@ -1,0 +1,3 @@
+[submodule "Src/Tcc"]
+	path = Src/Tcc
+	url = https://github.com/TinyCC/tinycc
