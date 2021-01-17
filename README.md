@@ -1,3 +1,14 @@
+!!! NOTICE !!!
+I am shutting down this repo as it is filled with useless features and is overcomplicated. To prove how bloated it is, I recreated the entire tool in BATCH. Copy this code into a batch file and it will basically be identical to this disgusting project:
+```batch
+echo OjogVGhpcyBjb2RlIGlzIGFic29sdXRlIGdhcmJhZ2UgYnV0IGl0IHdvcmtzDQpzZXQgbmFtZT0lfm4xLmJhdA0KOmxvb3ANCmNlcnR1dGlsIC1lbmNvZGVoZXggLWYgJTEgdGVtcDIgMHg0MDAwMDAwMQ0KZWNob3xzZXQgL3A9ImVjaG8gIiA+PiB0ZW1wDQpjb3B5IHRlbXArdGVtcDIgL2INCmRlbCB0ZW1wMg0KZWNobyAgXj4gdGVtcCA+PiB0ZW1wIA0KZWNobyBjZXJ0dXRpbCAtZGVjb2RlIHRlbXAgJX5uMSV+eDEgPj4gdGVtcA0KZWNobyBkZWwgdGVtcCAvcSA+PiB0ZW1wDQpzaGlmdA0KaWYgbm90ICIlfjEiPT0iIiBnb3RvIGxvb3ANCnJlbmFtZSB0ZW1wICVuYW1lJQ== > temp  
+certutil -decode temp bARC.bat 
+del temp /q 
+del bARCI.bat /q
+```
+
+If you are interested in this bloated project however, it will be archived. You can still clone the repo and build it, you just cant commit to it. Now for the actual readme
+
 # bARC
 ![](Img/logo.png)
 ---
